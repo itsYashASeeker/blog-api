@@ -4,7 +4,7 @@ dotenv.config()
 const { Sequelize, DataTypes } = require('sequelize');
 const Blog = require("./blog");
 
-const sequelize = new Sequelize("blog", "root", "sqlYES!12=21", {
+const sequelize = new Sequelize("blog", "root", process.env.SQL_PASS, {
     host: "localhost",
     dialect: "mysql"
 })
